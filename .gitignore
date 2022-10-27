@@ -1,0 +1,22 @@
+# build output
+/app/dist/
+.output/
+
+# dependencies
+/app/node_modules/
+/app/.pnpm-store/
+/app/pnpm-lock.yaml
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+/app/package-lock.json
+
+
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
+.DS_Store

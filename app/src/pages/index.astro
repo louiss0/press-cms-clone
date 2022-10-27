@@ -1,0 +1,57 @@
+---
+import AstroTemplateOutlet from "~/components/AstroTemplateOutlet.astro";
+import AstroTopFrameWorksCircle from "~/components/AstroTopFrameWorksCircle.astro";
+import Center from "~/components/Center.astro";
+import Container from "~/components/Container.astro";
+import Gap from "~/components/Gap.astro";
+import HMFLayout from "~/layouts/HMFLayout.astro";
+---
+
+<HMFLayout title="Home">
+  <Container slot="header">
+    <AstroTemplateOutlet templateName="centered-content" />
+
+    <h1>This is the astro template</h1>
+
+    <Gap spaces={3} />
+    <p>
+      This template is designed with the TailwindCSS intergration. Vue installed
+      and has a few basic utility components to use. The styles will be found in
+      the base layout component.
+
+      <br />
+      Go to the readme for more information.
+    </p>
+
+    <div class="text-xl text-red-400">
+      Please remember to use the containers with the slot's provided for content
+    </div>
+  </Container>
+
+  <Container slot="main">
+    <p>
+      If you want to either remove or add a framework go to the HMFLayout in
+      order to change the component framework.
+    </p>
+    <strong>Your options are.</strong>
+
+    <ul class="grid gap-2" role="list">
+      <li>React</li>
+      <li>Vue</li>
+      <li>Angular</li>
+      <li>Svelte</li>
+      <li>Solid</li>
+    </ul>
+  </Container>
+
+  <Container slot="footer">
+    <div class="grid place-items-center">
+      <AstroTopFrameWorksCircle revealedFrameworks={["vue"]} />
+    </div>
+  </Container>
+</HMFLayout>
+<template name="centered-content">
+  <Center widthClass={"w-4/5"} flexClasses={"flex "}>
+    I'm from the center component
+  </Center>
+</template>
