@@ -1,7 +1,5 @@
 # Astro Docker Template
 
-git
-
 This template is a template that contains two main folders the app folder and the dockerfile.
 
 Astro is used as my static site generator. Vue is the Ui framework of choice. Tailwind css is the framework of choice.
@@ -132,24 +130,3 @@ The bootstrap folder contains the global components folder and the global config
 
 These two setting are very important the `"."` refers to the folder that the tsconfig is in.
 The paths stops typescript from throwing an error when I use `"~"` to refer to the src file.
-
-## [Rules Regarding Projects](#sections)
-
-Astro is a framework that does not allow me to create real apps from now on I will need to follow a set of restrictions regarding This framework.  
-Because of the limitations oof astro and the fact that I need to make sure that I remain consistent. I'm going to have to follow these rules.
-
-1. The `BaseLayout` component is the root layout it will only be used to create other layouts
-
-2. Global Styles must only be declared in the `BaseLayout` layout.
-
-   - This means `<style is:global>` cannot be used on other layouts
-
-3. The `index.astro` file must always be used to create all my first pages unless told otherwise
-
-4. The articles that are written must be written by using `"remark-html-directives"`
-
-5. New layouts will not change anything about The styles that were created in the `BaseLayout`
-
-6. The `HMFLayout will not change under any circumstances`
-
-7. The `HMFLayout only be used if Two slots are to be used`

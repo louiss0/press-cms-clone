@@ -1,7 +1,7 @@
 # build output
 /app/dist/
 .output/
-
+/.vscode/**
 # dependencies
 /app/node_modules/
 /app/.pnpm-store/

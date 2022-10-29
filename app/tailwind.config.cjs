@@ -1,3 +1,5 @@
+const colors = require("tailwindcss/colors");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: "class",
@@ -10,5 +12,13 @@ module.exports = {
     "opacity-0",
     "text-red-400",
   ],
+  theme: {
+    extend: {
+      colors: {
+        "yellow-green": "rgb(var(--yellow-green-color) / <alpha-value>)",
+        brown: "rgb(var(--brown-color) / <alpha-value>)",
+      },
+    },
+  },
   plugins: [],
 };

@@ -22,9 +22,9 @@ const { title } = Astro.props as Props;
         @import "@fontsource/lato/700.css";
         @import "@fontsource/lato/900.css";
         @import "@fontsource/raleway";
-        @import "primevue/resources/themes/tailwind-light/theme.css";
         @import "primevue/resources/primevue.min.css";
         @import "primeicons/primeicons.css";
+        @import "primevue/resources/themes/tailwind-light/theme.css";
 
         :root {
           --step--2: clamp(0.69rem, calc(0.58rem + 0.48vw), 0.96rem);
@@ -38,6 +38,8 @@ const { title } = Astro.props as Props;
 
           --heading-font: "Raleway", sans-serif;
           --body-font: "Lato", sans-serif;
+          --yellow-green-color: 223 214 5;
+          --brown-color: 151 131 85;
         }
 
         body {
@@ -79,7 +81,7 @@ const { title } = Astro.props as Props;
         }
 
         img {
-          @apply aspect-square object-cover;
+          @apply aspect-square;
         }
 
         p {
