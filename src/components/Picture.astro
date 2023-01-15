@@ -1,0 +1,17 @@
+---
+import { Picture } from "astro-imagetools/components";
+
+type Props = {
+  src: string;
+  alt: string;
+  artDirectives: Array<{
+    src: string;
+    media:
+      | `(${"min-width"}:${320 | 375 | 640 | 768 | 1024 | 1280 | 1536})`
+      | `(${"orientation"}:${"portrait" | "landscape"})`;
+  }>;
+};
+const { src, alt, artDirectives } = Astro.props;
+---
+
+<Picture {...{src, alt, artDirectives}} />

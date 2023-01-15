@@ -1,0 +1,20 @@
+---
+import { Img } from "astro-imagetools/components";
+
+interface Props {
+  title: string;
+  src: string;
+}
+
+const { title, src } = Astro.props;
+---
+
+<div class="grid">
+  <header>
+    <Img src={src} alt={title} />
+  </header>
+  <div class="py-2 px-4">
+    <div class="text-xl">{title}</div>
+  </div>
+  <footer class=""></footer>
+</div>

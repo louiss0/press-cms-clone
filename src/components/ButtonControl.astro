@@ -1,0 +1,20 @@
+---
+interface Button extends astroHTML.JSX.ButtonHTMLAttributes {
+  type: "button";
+  onClick(...args: Array<any>): void;
+}
+
+interface Anchor extends astroHTML.JSX.AnchorHTMLAttributes {
+  type: "a";
+}
+
+type Props = Button | Anchor;
+
+const { type, class: $class, ...rest } = Astro.props;
+
+const Tag = type;
+---
+
+<Tag {...rest} class:list={["[is(:hover,:focus)]:text-gray-400", $class]}>
+  <slot />
+</Tag>
